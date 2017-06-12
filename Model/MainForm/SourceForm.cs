@@ -49,8 +49,8 @@ CreateRandomDataButton.Visible = false;
                     dissertation.Town = Convert.ToString(textBoxTown.Text);
                     dissertation.ScienceDegree = Convert.ToString(textBoxScienceDegree.Text);
                     dissertation.SpecialityCode = Convert.ToInt32(textBoxSpecialityCode.Text);
-                    dissertation.DataOfProtection = Convert.ToDateTime(dateTimePicker1);
-                    dissertation.DataOfApproval = Convert.ToDateTime(dateTimePicker2);
+                    //dissertation.DataOfProtection = Convert.ToDateTime(dateTimePicker1.Date);
+                    //dissertation.DataOfApproval = Convert.ToDateTime(dateTimePicker2);
                     dissertation.Year = Convert.ToInt32(textBoxYear.Text);
                     dissertation.Pages = Convert.ToInt32(textBoxPages.Text);
                     return dissertation;
@@ -61,7 +61,6 @@ CreateRandomDataButton.Visible = false;
                     electronicResource.Author = Convert.ToString(textBoxAuthor);
                     electronicResource.Title = Convert.ToString(textBoxTitle.Text);
                     electronicResource.URL = Convert.ToString(textBoxURL.Text);
-                    electronicResource.Nomination = Convert.ToString(textBoxNomination.Text);
                     return electronicResource;
                 }
             }
@@ -100,7 +99,6 @@ CreateRandomDataButton.Visible = false;
                     comboBox1.SelectedIndex = 2;
                     textBoxAuthor.Text = electronicResource.Author;
                     textBoxTitle.Text = electronicResource.Title;
-                    textBoxNomination.Text = electronicResource.Nomination;
                     textBoxURL.Text = electronicResource.URL;
                 }
             }
@@ -182,7 +180,7 @@ CreateRandomDataButton.Visible = false;
             {
                 labelAuthor.Visible = true;
                 labelCoathor.Visible = false;
-                labelNomination.Visible = true;
+                labelNomination.Visible = false;
                 labelPublishingHouse.Visible = false;
                 labelReissue.Visible = false;
                 labelTitle.Visible = true;
@@ -199,7 +197,7 @@ CreateRandomDataButton.Visible = false;
                 textBoxTitle.Visible = true;
                 textBoxCoathor.Visible = false;
                 textBoxTown.Visible = false;
-                textBoxNomination.Visible = true;
+                textBoxNomination.Visible = false;
                 textBoxPublishingHouse.Visible = false;
                 textBoxReissue.Visible = false;
                 textBoxPages.Visible = false;
@@ -401,11 +399,9 @@ CreateRandomDataButton.Visible = false;
                 string[] author =
                 {
                     "Корнющенко Ю.В",
-                    "",
                     "Хованский. Ю.П",
-                    "",
                     "Субботина В",
-                    ""
+                    "Райдос Виктория"
                 };
                 textBoxAuthor.Text = (author[random.Next(author.Length)]);
                 string[] title =
@@ -418,6 +414,7 @@ CreateRandomDataButton.Visible = false;
                     "ТУСУР"
                 };
                 textBoxTitle.Text = (title[random.Next(title.Length)]);
+
             }
 
         }
