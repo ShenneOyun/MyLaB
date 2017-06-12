@@ -111,6 +111,7 @@ CreateRandomDataButton.Visible = false;
             Close();
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -211,6 +212,7 @@ CreateRandomDataButton.Visible = false;
             }
         }
 
+        //рандомное заполнение
         private void buttonRandom_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -420,6 +422,7 @@ CreateRandomDataButton.Visible = false;
 
         }
 
+        //кнопка отмены
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.CancelButton = buttonCancel;

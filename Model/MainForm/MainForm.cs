@@ -70,6 +70,14 @@ namespace MainForm
 
         }
 
+
+
+
+
+
+        ///<summary>
+        /// Кнопка удаления строки из таблицы
+        ///    </summary>
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             int removeIndex = dataGridView1.CurrentCell.RowIndex;
@@ -77,6 +85,12 @@ namespace MainForm
             Sources.RemoveAt(removeIndex);
         }
 
+
+
+
+        ///<summary>
+        /// Кнопка поиска в таблице
+        ///    </summary>
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
